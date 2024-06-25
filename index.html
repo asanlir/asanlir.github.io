@@ -9,12 +9,19 @@
   <body>
     <header>
       <h1>Portfolio Profesional de Alejandro Sánchez Lirola</h1>
+      <p class="email">alejandrosanchezlirola@gmail.com</p>
       <nav>
         <ul>
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#tech-stack">Tech Stack</a></li>
           <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#connect">Contacto</a></li>
+          <li><a href="#" id="contact-link">Contacto</a>
+            <ul class="dropdown">
+              <li><a href="https://www.linkedin.com/in/alejandro-sanchez-lirola/">LinkedIn</a></li>
+              <li><a href="https://github.com/asanlir">GitHub</a></li>
+            </ul>
+          </li>
+          <li><a href="cv.pdf" download>CV</a></li> <!-- Enlace al archivo CV -->
         </ul>
       </nav>
     </header>
@@ -95,33 +102,12 @@
         </p>
         <!-- Agregar detalles de proyectos aquí -->
       </section>
-
-      <section id="connect">
-        <h2>Contacto</h2>
-        <p>
-          Si quieres saber más o simplemente charlar sobre tecnología, no dudes
-          en ponerte en contacto conmigo.
-        </p>
-        <ul>
-          <li>
-            <a href="mailto:alejandrosanchezlirola@gmail.com"
-              ><img src="assets/gmail.png" width="30" height="30" alt="Gmail" />
-              alejandrosanchezlirola@gmail.com</a
-            >
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/alejandro-sanchez-lirola/"
-              ><img
-                src="assets/linkedin.png"
-                width="30"
-                height="30"
-                alt="LinkedIn"
-              />
-              www.linkedin.com/in/alejandro-sanchez-lirola</a
-            >
-          </li>
-        </ul>
-      </section>
     </main>
+    <script>
+      document.getElementById("contact-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.querySelector(".dropdown").classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
