@@ -60,7 +60,7 @@ nav ul li ul.dropdown {
   position: absolute;
   top: 40px;
   left: 0;
-  background-color: #0077b6;
+  background-color: #02669c;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px 0;
@@ -79,6 +79,8 @@ nav ul li ul.dropdown li a {
 
 nav ul li ul.dropdown.show {
   display: block;
+  width: 120px;
+  height: 75px;
 }
 
 .icon {

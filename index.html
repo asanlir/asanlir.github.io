@@ -28,17 +28,17 @@
             <ul class="dropdown">
               <li>
                 <a href="https://www.linkedin.com/in/alejandro-sanchez-lirola/"
-                  ><img src="assets/linkedin.png" alt="LinkedIn" class="icon"
+                  ><img src="assets/icons8-linkedin-64.png" alt="LinkedIn" class="icon"
                 />LinkedIn</a>
               </li>
               <li>
                 <a href="https://github.com/asanlir"
-                  ><img src="assets/github.png" alt="GitHub" class="icon"
+                  ><img src="assets/icons8-github-48.png" alt="GitHub" class="icon"
                 />GitHub</a>
               </li>
             </ul>
           </li>
-          <li><a href="cv.pdf" download>CV</a></li>
+          <li><a href="assets/Alejandro%20Sanchez%20CV.pdf" download>CV</a></li>
         </ul>
       </nav>
     </header>
@@ -101,7 +101,10 @@
     <script>
       document.getElementById("contact-link").addEventListener("click", function (event) {
         event.preventDefault();
-        document.querySelector(".dropdown").classList.toggle("show");
+        const dropdown = document.querySelector(".dropdown");
+        if (dropdown) {
+          dropdown.classList.toggle("show");
+        }
       });
     </script>
   </body>
