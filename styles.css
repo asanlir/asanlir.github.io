@@ -63,6 +63,7 @@ nav ul li ul.dropdown {
   background-color: #0077b6;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  padding: 10px 0;
 }
 
 nav ul li ul.dropdown li {
@@ -71,10 +72,18 @@ nav ul li ul.dropdown li {
 
 nav ul li ul.dropdown li a {
   padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 nav ul li ul.dropdown.show {
   display: block;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 main {
@@ -131,7 +140,7 @@ section img {
   }
 
   main {
-    padding-top: 340px; /* Aumentar para que el contenido no quede tapado en dispositivos móviles */
+    padding-top: 540px; /* Aumentar para que el contenido no quede tapado en dispositivos móviles */
     padding: 10px;
   }
 
