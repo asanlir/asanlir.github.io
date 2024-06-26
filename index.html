@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Alejandro</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>Portfolio Profesional de Alejandro Sánchez Lirola</h1>
+      <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&duration=3000&pause=500&color=FFFFFF&center=true&vCenter=true&random=false&width=435&lines=%C2%A1Hola+Mundo!+;Soy+Alejandro+S%C3%A1nchez" alt="Typing SVG" /></a>
       <p class="email">alejandrosanchezlirola@gmail.com</p>
       <nav>
         <ul>
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#tech-stack">Tech Stack</a></li>
           <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#" id="contact-link">Contacto</a>
+          <li>
+            <a href="#" id="contact-link">Contacto</a>
             <ul class="dropdown">
-              <li><a href="https://www.linkedin.com/in/alejandro-sanchez-lirola/">LinkedIn</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/alejandro-sanchez-lirola/"
+                  >LinkedIn</a
+                >
+              </li>
               <li><a href="https://github.com/asanlir">GitHub</a></li>
             </ul>
           </li>
-          <li><a href="assets/Alejandro Sanchez CV.pdf" download>CV</a></li> <!-- Enlace al archivo CV -->
+          <li><a href="cv.pdf" download>CV</a></li>
         </ul>
       </nav>
     </header>
@@ -39,7 +48,7 @@
           línea. Siempre estoy en busca de nuevos desafíos y oportunidades para
           innovar y crecer en el mundo tecnológico.
         </p>
-        <img 
+        <img
           src="https://raw.githubusercontent.com/asanlir/asanlir/main/assets/1699565272303.jpg"
           alt="Alejandro"
         />
@@ -104,7 +113,7 @@
       </section>
     </main>
     <script>
-      document.getElementById("contact-link").addEventListener("click", function(event) {
+      document.getElementById("contact-link").addEventListener("click", function (event) {
         event.preventDefault();
         document.querySelector(".dropdown").classList.toggle("show");
       });
