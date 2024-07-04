@@ -1,3 +1,4 @@
+/* Estilos generales para la página */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   background-color: #f4f4f9;
   color: #333;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 header {
@@ -115,6 +117,7 @@ section img {
   height: auto;
   margin-top: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .badges img {
@@ -149,4 +152,101 @@ section img {
   section h2 {
     font-size: 24px;
   }
+}
+
+/* Estilos para el toggle de modo oscuro */
+.toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #6698b6;
+  width: 40px;
+  height: 16px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label .fas {
+  font-size: 18px;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f3872e;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/* Estilo para el modo oscuro */
+body[data-theme='dark'] {
+  background-color: #333;
+  color: #f4f4f9;
+}
+
+/* Estilos adicionales según el tema */
+[data-theme='dark'] header {
+  background-color: #1d1c1c;
+}
+
+[data-theme='dark'] header a {
+  color: #f4f4f9;
+}
+
+[data-theme='dark'] nav ul li a {
+  color: #f4f4f9;
+}
+
+[data-theme='dark'] nav ul li a:hover {
+  background-color: #444;
+}
+
+[data-theme='dark'] nav ul li ul.dropdown {
+  background-color: #444;
+}
+
+[data-theme='dark'] section h2 {
+  color: #f1c40f;
+}
+
+[data-theme='dark'] .icon {
+  filter: invert(100%);
+}
+
+[data-theme='dark'] body {
+  background-color: #333;
+  color: #f4f4f9;
+}
+
+[data-theme='dark'] .checkbox-label {
+  background-color: #3b6179;
 }
