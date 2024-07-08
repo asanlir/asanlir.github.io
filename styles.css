@@ -53,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #005f8a;
+  background-color: #014463;
   border-radius: 5px;
 }
 
@@ -79,7 +79,7 @@ nav ul li ul.dropdown li a {
   gap: 10px;
 }
 
-nav ul li ul.dropdown.show {
+nav ul li:hover ul.dropdown {
   display: block;
   width: 120px;
   height: 75px;
@@ -91,10 +91,10 @@ nav ul li ul.dropdown.show {
 }
 
 main {
-  padding-top: 500px; /* Aumentar para que el contenido no quede tapado */
+  padding-top: 500px; /* Ajuste del padding top */
   max-width: 800px;
   margin: 0 auto;
-  padding: 150px;
+  padding: 150px 20px;
 }
 
 section {
@@ -122,36 +122,6 @@ section img {
 
 .badges img {
   margin: 10px;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 20px;
-  }
-
-  header .email {
-    font-size: 12px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul li ul.dropdown {
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  main {
-    padding-top: 540px; /* Aumentar para que el contenido no quede tapado en dispositivos móviles */
-    padding: 10px;
-  }
-
-  section h2 {
-    font-size: 24px;
-  }
 }
 
 /* Estilos para el toggle de modo oscuro */
@@ -249,4 +219,63 @@ body[data-theme='dark'] {
 
 [data-theme='dark'] .checkbox-label {
   background-color: #3b6179;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+
+  header .email {
+    font-size: 12px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav ul li ul.dropdown {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main {
+    padding-top: 520px; /* Ajuste del padding top para dispositivos móviles */
+    padding: 150px 10px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  .toggle-container {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding-top: 540px; /* Ajuste del padding top para dispositivos móviles más pequeños */
+    padding: 150px 10px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
 }
