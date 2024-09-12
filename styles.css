@@ -110,6 +110,7 @@ section h2 {
 section p {
   font-size: 16px;
   line-height: 1.6;
+  margin-bottom: 40px;
 }
 
 section img {
@@ -118,6 +119,14 @@ section img {
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título h3 en proyectos (modo claro) */
+#projects h3 {
+  font-size: 24px;
+  color: #1298e0; /* Color específico para el modo claro */
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .badges img {
@@ -129,7 +138,7 @@ section img {
   display: flex;
   align-items: center;
   justify-content: space-between; /* Espacio entre los elementos */
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Espacio entre cada proyecto */
 }
 
 /* Estilo del contenedor de texto */
