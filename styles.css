@@ -1,6 +1,6 @@
 /* Estilos generales para la página */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
@@ -124,6 +124,51 @@ section img {
   margin: 10px;
 }
 
+/* Contenedor para los proyectos */
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacio entre los elementos */
+  margin-bottom: 40px;
+}
+
+/* Estilo del contenedor de texto */
+.project-text {
+  flex: 1; /* El texto ocupará el espacio restante */
+  padding-right: 20px; /* Añade un espacio entre el texto y la imagen */
+}
+
+/* Estilo del contenedor de la imagen */
+.project-image-wrapper {
+  flex: 0 0 302px; /* Fija el ancho de la imagen */
+  text-align: right; /* Alinea la imagen a la derecha */
+}
+
+/* Estilo de la imagen */
+.project-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column; /* En pantallas pequeñas, apila el texto y la imagen */
+  }
+
+  .project-text {
+    padding-right: 0;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .project-image-wrapper {
+    margin-top: 20px; /* Espacio entre el texto y la imagen en pantallas pequeñas */
+    text-align: center;
+  }
+}
+
 /* Estilos para el toggle de modo oscuro */
 .toggle-container {
   position: fixed;
@@ -178,47 +223,58 @@ section img {
 }
 
 /* Estilo para el modo oscuro */
-body[data-theme='dark'] {
+body[data-theme="dark"] {
   background-color: #333;
   color: #f4f4f9;
 }
 
 /* Estilos adicionales según el tema */
-[data-theme='dark'] header {
+[data-theme="dark"] header {
   background-color: #1d1c1c;
 }
 
-[data-theme='dark'] header a {
+[data-theme="dark"] header a {
   color: #f4f4f9;
 }
 
-[data-theme='dark'] nav ul li a {
+[data-theme="dark"] nav ul li a {
   color: #f4f4f9;
 }
 
-[data-theme='dark'] nav ul li a:hover {
+[data-theme="dark"] nav ul li a:hover {
   background-color: #444;
 }
 
-[data-theme='dark'] nav ul li ul.dropdown {
+[data-theme="dark"] nav ul li ul.dropdown {
   background-color: #444;
 }
 
-[data-theme='dark'] section h2 {
+[data-theme="dark"] section h2 {
   color: #f1c40f;
 }
 
-[data-theme='dark'] .icon {
+[data-theme="dark"] .icon {
   filter: invert(100%);
 }
 
-[data-theme='dark'] body {
+[data-theme="dark"] body {
   background-color: #333;
   color: #f4f4f9;
 }
 
-[data-theme='dark'] .checkbox-label {
+[data-theme="dark"] .checkbox-label {
   background-color: #3b6179;
+}
+
+/* Si el data-theme se aplica a <html> */
+html[data-theme='dark'] #projects h3,
+body[data-theme='dark'] #projects h3 {
+  color: #f59e2c; /* Cambia a un color claro para el modo oscuro */
+}
+
+html[data-theme='dark'] #projects p,
+body[data-theme='dark'] #projects p {
+  color: #f4f4f9; /* Cambia a un color claro para el modo oscuro */
 }
 
 /* Media Queries */
@@ -279,3 +335,4 @@ body[data-theme='dark'] {
     font-size: 20px;
   }
 }
+
