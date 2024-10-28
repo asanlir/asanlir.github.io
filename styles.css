@@ -136,26 +136,42 @@ section img {
 /* Contenedor para los proyectos */
 .project-container {
   display: flex;
+  flex-direction: column; /* Apila los proyectos verticalmente */
+  gap: 40px; /* Espacio entre cada proyecto */
+}
+
+/* Contenedor para cada proyecto individual */
+.project-item {
+  display: flex;
   align-items: center;
-  justify-content: space-between; /* Espacio entre los elementos */
-  margin-bottom: 40px; /* Espacio entre cada proyecto */
+  gap: 20px;
+}
+
+/* Proyectos con imagen a la derecha (posición impar) */
+.project-item:nth-child(odd) {
+  flex-direction: row; /* Texto a la izquierda, imagen a la derecha */
+}
+
+/* Proyectos con imagen a la izquierda (posición par) */
+.project-item:nth-child(even) {
+  flex-direction: row-reverse; /* Texto a la derecha, imagen a la izquierda */
 }
 
 /* Estilo del contenedor de texto */
 .project-text {
-  flex: 1; /* El texto ocupará el espacio restante */
-  padding-right: 20px; /* Añade un espacio entre el texto y la imagen */
+  flex: 1;
+  padding: 0 20px;
 }
 
 /* Estilo del contenedor de la imagen */
 .project-image-wrapper {
-  flex: 0 0 302px; /* Fija el ancho de la imagen */
-  text-align: right; /* Alinea la imagen a la derecha */
+  flex: 0 0 302px;
+  text-align: center;
 }
 
 /* Estilo de la imagen */
 .project-image {
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -163,20 +179,21 @@ section img {
 
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-  .project-container {
-    flex-direction: column; /* En pantallas pequeñas, apila el texto y la imagen */
+  .project-item {
+    flex-direction: column; /* Apila texto e imagen verticalmente en móviles */
+    text-align: center;
   }
 
   .project-text {
-    padding-right: 0;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    padding: 0;
+    text-align: center;
   }
 
   .project-image-wrapper {
-    margin-top: 20px; /* Espacio entre el texto y la imagen en pantallas pequeñas */
-    text-align: center;
+    margin-top: 20px; /* Espacio entre el texto y la imagen en vista vertical */
   }
 }
+
 
 /* Estilos para el toggle de modo oscuro */
 .toggle-container {
@@ -344,4 +361,3 @@ body[data-theme='dark'] #projects p {
     font-size: 20px;
   }
 }
-
