@@ -167,18 +167,25 @@ section img {
 .project-image-wrapper {
   flex: 0 0 302px;
   text-align: center;
+  transition: transform 0.3s ease; /* Transición suave para la animación */
+  overflow: hidden; /* Evita que se vea fuera del contenedor */
+}
+
+.project-image-wrapper:hover {
+  transform: scale(1.10); /* Escala ligeramente la imagen al pasar el ratón */
 }
 
 /* Estilo de la imagen */
 .project-image {
-  max-width: 70%;
-  height: auto;
+  width: 100%;
+  height: 170px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Media Query para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .project-item {
     flex-direction: column; /* Apila texto e imagen verticalmente en móviles */
     text-align: center;
