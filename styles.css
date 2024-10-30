@@ -185,7 +185,7 @@ section img {
 }
 
 /* Media Query para dispositivos móviles */
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .project-item {
     flex-direction: column; /* Apila texto e imagen verticalmente en móviles */
     text-align: center;
